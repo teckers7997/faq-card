@@ -1,0 +1,117 @@
+@font-face {
+    font-family: KumbhSans-Regular;    
+    src: url("./fonts/KumbhSans-Regular.ttf");
+}
+@font-face {
+    font-family: KumbhSans-Bold;
+    src: url("./fonts/KumbhSans-Bold.ttf");
+}
+
+html{    
+    background: linear-gradient(hsl(237, 75%, 66%) , hsl(240, 73%, 65%) );
+    font-family: KumbhSans-Regular;    
+}  
+
+h1 {
+    font-family:  KumbhSans-Bold;
+    margin-top: 15%;
+}
+.grid-container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    margin: 15%;
+    border-radius: 5%;
+    
+    
+}
+
+.right-side { 
+    grid-column: 7 / span 5;
+    grid-row: 1 / span 5;
+    margin-right: 10%;
+
+}
+
+.left-side {
+    grid-column: 1 / span 6;
+    grid-row: 1/ span 5;
+    position: relative;
+    top: 0;
+    left:-20%;
+}
+
+.backgroundImg {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: auto;
+    height: 50%;
+}
+
+.backImg {
+    position: absolute;
+    top: 05%;
+    left: 0;
+    z-index: 1;
+}
+
+.frontImg {
+    position: absolute;
+    top: 19%;
+    left: -2%;
+    
+    z-index:2 ;
+}
+.questionButton::after {
+    content: url('./images/icon-arrow-down.svg');
+    float: right;
+    margin-left: 10px;
+    
+}
+
+.questionButton:hover {
+    color: hsl(14, 88%, 65%)
+}
+
+.answer {
+    visibility: hidden;
+    display: none;
+}
+
+.showAnswer {
+    visibility: visible !important;
+    display: block;
+    text-align: left;
+}
+
+.invertDropdown {
+    transform: rotate(180deg) !important;
+}
+
+.questionButton {
+    font-size: 16px;
+    font-family: KumbhSans-Regular;
+    border: none;
+    color: hsl(238, 29%, 16%);
+    background-color: white;
+    width: 100%;
+    text-align: left;
+    margin-top: 10%;
+    margin-right: 10%;
+    
+    
+}
+
+.questionButtonClicked { 
+    
+    font-family: KumbhSans-Bold;
+}
+
+.questionButtonClicked::after {
+    content: url('./images/icon-arrow-down.svg');
+    float: right;
+    transform: rotate(180deg);
+}
